@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en"  xml:lang="en">
+	<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+	<title>Oscar</title>
+
+ 	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/script.js"></script>
+
+
+ </head>
+<body>
+<div class = "header">
+	<div class = "container">
+    <!-- <a href ="/"><p id ="title">Oscar</p></a> -->
+		<ul class ="nav">
+			<!-- <li><a href ="/signup">Sign Up</a></li> -->
+
+			<% if(isAuthenticated){ %>
+	     <li><a class = "mini-start-button" href ="/main">Get Started</a></li>
+	    <% } else { %>
+	     <li><a class = "mini-start-button" href ="/signin">Get Started</a></li>
+	    <% } %>
+
+		</ul>
+	</div>
+</div>
+<div class = "container">
+	<div id = "introduction">
+
+		<h1>Oscar</h1>
+		<p>your perfect chat assistant helps you manage your tasks more effectively.</p>
+		<br/>
+
+
+		<div id="video">
+          <video id="vid" src="video/main.mp4" height="80%" autoplay muted loop="true"></video>
+    </div>
+	</br>
+
+		<!-- <img src ="images/oscar-icon.png"/> -->
+
+		<% if(isAuthenticated){ %>
+     <a class = "start-button" href="/main">Get Started</a><% } else { %>
+     <a class = "start-button" href="/signin">Get Started</a><% } %>
+		<br/>
+		 <a class = "transparent-button" href="https://gist.github.com/erinhye/8d48032ad5cd42cbd341ec17ed4750ec" target="_blank">Guideline (KR)</a>
+
+		<div id = "indent">
+			<h2>Oscar</h2>
+			<p>Oscar is a chat assistant that helps you manage your prioritized tasks way more effectively. the principal concept of the project is "a chat interface combines with a normal to-do platform". so basically you can use functions such as adding or deleting tasks through GUI like normal to-do platforms, but I'v added a chat interface into the project, so you can use way more advanced and fun functions through it.</p>
+			<br/>
+			<h3>Introducing GUI</h3>
+			<p>As I told you, you sure can use GUI like normal to-do platforms. you can add tasks or groups to the website through it</p>
+			<br/>
+			<h3>Introducing CUI (chat user interface)</h3>
+			<p>press "Talk to me" button to start using the chat interface. you can use lots of advanced functions (which is not allowed to use on GUI) through it.</p>
+			<br/>
+			<h3>on GH</h3>
+			<p>links are available for a limited-time
+				<br/>
+				https://github.com/erinhye/Oscar-deploy
+				<br/>
+				https://github.com/erinhye/Oscar-n-wh
+				</p>
+			<!-- <h3>Introducing the Mobile Service (on Kakaotalk)</h3>
+			<p>is now being prepared
+				</p> -->
+			<br/>
+			<!-- <h3>Examples of how to use the chat interface</h3>
+			<p>Here're great examples of how to start talking with him. Enjoy! ;-)</p> -->
+		</div>
+
+	</div>
+
+</div>
+<!-- <div id = "footer">
+</div> -->
+</body>
+</html>

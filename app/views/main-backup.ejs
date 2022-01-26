@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en"  xml:lang="en">
+	<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+	<title>Oscar</title>
+
+ 	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/apiai.css">
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main-public.js"></script>
+	<script src="js/script-public.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/apiai.js"></script>
+
+
+
+ </head>
+<body>
+<div class = "header">
+	<div class = "container">
+    <!-- <a href ="/">--><p id ="title-center">Oscar</p><!--</a> -->
+		<ul class ="nav">
+			<li><a href ="/">Main</a></li>
+			<li>Sign out</li>
+		</ul>
+	</div>
+</div>
+<!-- <div class = "container iconcontainer">
+	<div id = "icons">
+		<div class = "icon border">
+			<div class = "horizontal line"></div>
+		</div>
+		<div class = "icon border">
+			<div class = "vertical line"></div>
+			<div class = "vertical line"></div>
+		</div>
+
+	</div>
+</div> -->
+<div class = "contents list-container">
+
+	<div class = "list list-dimension group">
+		<div class = "group-title">Interaction Design</div>
+		<ul class="list-inner-scroll">
+      <li class="list-item">
+				<div class = "prioritized a"></div>
+				<h2>29th, Oct, 2017</h2>
+				<h3>Interaction design With @Darci lynne</h3>
+				<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+			</li>
+			<li class="list-item">
+				<div class = "prioritized b"></div>
+				<h2>29th, Oct, 2017</h2>
+				<h3>Interaction design With @Darci lynne</h3>
+				<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+			</li>    </ul>
+		<button class="add-card-button">Add a card...</button>
+
+	</div>
+
+
+	<div class = "list list-dimension group">
+		<div class = "group-title" id ="Undefined">Undefined</div>
+		<ul class="list-inner-scroll">
+
+			<%if(contents.length>0){%>
+	        <%var i = 0;%>
+	        <%contents.forEach(function(item){%>
+	        <%i++;%>
+					<li class="list-item">
+						<div class = "prioritized e"></div>
+						<h2>29th, Oct, 2017</h2>
+						<br/>
+						<h3><%=item.title%> With @<%=item.associate%></h3>
+						<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+					</li>
+					<%})%>
+		        <%} else {%>
+							<%}%>
+
+    </ul>
+		<button class="add-card-button">Add a card...</button>
+
+	</div>
+
+
+
+	<div class = "list-dimension group add-list-button add">
+		Add a list...
+
+	</div>
+
+
+</div>
+<div class ="oscar-button">
+	👨🏼‍💻 Talk to me
+</div>
+<div class ="oscar-chat">
+	<h5>Oscar</h5>
+	<div id ="close">Close</div>
+	<div class = "chat-container">
+			<div class ="icon oscar"></div>
+
+      <div class ="oscar-chats">Hi, What can I help you with?</div>
+      <!-- <div class ="oscar-chats">If you struggle with talking to me, just say "Help" or "Examples"! Then I'll help you!</div> -->
+	</div>
+			<div id = "typing-container">
+      <input id ="input"></input>
+      <div id ="send" onclick = "send();">Send</div>
+      </div>
+</div>
+
+<div class ="modal taskmodal">
+	<div class ="modal-contents">
+		<form id ="addtaskform" method="post">
+
+			<input type="text" id ="tasktitle" name ="title" placeholder ="Title"></input>
+			<input type="text" id ="taskdescription" name ="description" placeholder ="Description"></input>
+			<input type="text" id ="taskassociate" name ="associate" placeholder ="Associate with"></input>
+			<input type ="date" id ="taskdeadline" name ="deadline" placeholder ="Deadline" min="2017-01-01"></input>
+			<input type ="number" id ="taskimportance" name ="importance" placeholder ="Importance" min="1" max="5"></input>
+			<input type="button" id ="addtask-submit" value="Submit">
+
+		</form>
+
+	</div>
+</div>
+
+<div class ="lmodal listmodal">
+	<div class ="modal-contents">
+		<form id ="addlistform" method="post">
+
+			<input type="text" id ="groupname" name ="name" placeholder ="Group name"></input>
+			<input type="button" id ="addlist-submit" value ="ADD">
+		</form>
+
+	</div>
+</div>
+
+</div>
+</body>
+</html>
